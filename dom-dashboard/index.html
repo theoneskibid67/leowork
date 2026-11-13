@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard de estudos sobre DOM, tecnologia e empreendedores do ecossistema cripto.">
+  <title>DOM Lab | Fundação de Ensino de Contagem</title> 
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">&lt;/&gt;</div>
+        <div>
+          <strong>DOM<span>LAB</span></strong>
+          <small>Frontend & tecnologia</small>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a class="nav-link active" href="#inicio"><span>⌂</span> Início</a>
+        <a class="nav-link" href="#cursos"><span>◈</span> Cursos</a>
+        <a class="nav-link" href="#contato"><span>✉</span> Contato</a>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="eyebrow">Trilha atual</span>
+        <strong>Manipulação do DOM</strong>
+        <p>Aprenda construindo interfaces vivas com HTML, CSS e JavaScript.</p>
+        <div class="progress-line"><span></span></div>
+        <small>Progresso da prática <b>72%</b></small>
+      </div>
+
+      <div class="sidebar-footer">
+        <span class="status-dot"></span>
+        <span>Ambiente local ativo</span>
+      </div>
+    </aside>
+
+    <main class="main-content" id="inicio">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Fundação de Ensino de Contagem</span>
+          <h1>Curso de Frontend</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="live-pill"><span class="status-dot"></span> Sessão de estudos</div>
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Alternar tema">
+            <span class="theme-icon">☼</span><span id="themeLabel">Soft light</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="hero-panel" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="section-kicker">01 / LABORATÓRIO INTERATIVO</span>
+          <h2 id="hero-title">Grandes ideias começam com uma boa estrutura.</h2>
+          <p>Explore o DOM e conheça três perfis conceituais que representam diferentes formas de pensar, construir e transformar o universo da tecnologia cripto.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#empreendedores">Explorar perfis <span>↗</span></a>
+            <button class="button button-ghost" id="showTip" type="button">Dica de DOM</button>
+          </div>
+          <p id="tipMessage" class="tip-message" role="status"></p>
+        </div>
+        <div class="hero-visual" aria-label="Ilustração de uma moeda criptográfica">
+          <div class="orb orb-one"></div><div class="orb orb-two"></div>
+          <div class="coin coin-large"><span>₿</span></div>
+          <div class="coin coin-small"><span>◈</span></div>
+          <div class="code-chip">&lt;DOM /&gt;</div>
+        </div>
+      </section>
+      <section class="stats-grid" aria-label="Resumo do dashboard">
+        <article class="stat-card"><span class="stat-icon violet">⌘</span><div><span class="stat-label">Elementos mapeados</span><strong id="elementCount">126</strong><small class="positive">+12% esta semana</small></div></article>
+        <article class="stat-card"><span class="stat-icon cyan">◒</span><div><span class="stat-label">Conceitos estudados</span><strong>24</strong><small class="positive">+4 novos conceitos</small></div></article>
+        <article class="stat-card"><span class="stat-icon orange">✦</span><div><span class="stat-label">Projetos práticos</span><strong id="projectCount">08</strong><small>2 em andamento</small></div></article>
+        <article class="stat-card"><span class="stat-icon green">↗</span><div><span class="stat-label">Nível da trilha</span><strong>Intermediário</strong><small>72% concluído</small></div></article>
+      </section>
+      <section class="section-block" id="cursos">
+        <div class="section-heading"><div><span class="section-kicker">02 / FUNDAMENTOS</span><h2>Manipulação do DOM</h2></div><span class="section-index">Módulo 02</span></div>
+        <p class="lead-text">Este é um parágrafo que será utilizado nos exercícios. O Document Object Model transforma a estrutura do HTML em uma árvore de objetos que pode ser lida e modificada pelo JavaScript.</p>
+        <p class="destaque">Este é um texto com a classe destaque. Clique em “Dica de DOM” para ver uma mensagem criada e atualizada pela interface.</p>
+      </section>
+
+      <section class="cards-grid" id="empreendedores" aria-labelledby="profiles-title">
+        <div class="section-heading compact"><div><span class="section-kicker">03 / ESTUDO DE CASO</span><h2 id="profiles-title">Mentes que movimentam possibilidades</h2></div><span class="section-index">3 perfis</span></div>
+        <div class="profile-grid" id="profileContainer">
+          <article class="profile-card profile-violet">
+            <div class="profile-top"><span class="profile-number">01</span><span class="tag">Blockchain</span></div>
+            <div class="avatar avatar-leo">LT</div><h3>Léo Tatu</h3><p class="profile-role">Blockchain God</p><p>Perfil conceitual de quem enxerga a blockchain como uma nova camada de confiança para negócios, comunidades e produtos digitais.</p><button class="text-button profile-detail" type="button" data-person="Léo Tatu">Ver perspectiva <span>→</span></button>
+          </article>
+          <article class="profile-card profile-cyan">
+            <div class="profile-top"><span class="profile-number">02</span><span class="tag">Cripto</span></div>
+            <div class="avatar avatar-satoshi">SN</div><h3>Satoshi Nakamoto</h3><p class="profile-role">CriptoGuy</p><p>Perfil conceitual ligado à criação de sistemas descentralizados, à soberania digital e ao valor de protocolos abertos.</p><button class="text-button profile-detail" type="button" data-person="Satoshi Nakamoto">Ver perspectiva <span>→</span></button>
+          </article>
+          <article class="profile-card profile-orange">
+            <div class="profile-top"><span class="profile-number">03</span><span class="tag">Web3</span></div>
+            <div class="avatar avatar-iano">IL</div><h3>Iano Lopes</h3><p class="profile-role">Abstractor Master</p><p>Perfil conceitual de um estrategista que conecta abstração, design de sistemas e experiências simples para ideias complexas.</p><button class="text-button profile-detail" type="button" data-person="Iano Lopes">Ver perspectiva <span>→</span></button>
+          </article>
+        </div>
+        <div id="profileMessage" class="inline-message" role="status"></div>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel tech-panel">
+          <div class="section-heading compact"><div><span class="section-kicker">04 / STACK</span><h2>Lista de tecnologias</h2></div></div>
+          <ul class="tech-list" id="techList">
+            <li><span class="tech-dot html-dot"></span>HTML <small>estrutura</small></li>
+            <li><span class="tech-dot css-dot"></span>CSS <small>estilo</small></li>
+            <li><span class="tech-dot js-dot"></span>JavaScript <small>interação</small></li>
+            <li><span class="tech-dot ts-dot"></span>TypeScript <small>escala</small></li>
+            <li><span class="tech-dot php-dot"></span>PHP <small>servidor</small></li>
+            <li><span class="tech-dot rust-dot"></span>Rust <small>performance</small></li>
+          </ul>
+          <button id="addTech" class="button button-secondary" type="button">Adicionar tecnologia</button>
+        </div>
+        <div class="panel image-panel">
+          <div class="section-heading compact"><div><span class="section-kicker">05 / IMAGEM</span><h2>Moeda cripto</h2></div></div>
+          <div class="crypto-art"><img class="crypto-image" src="assets/images/crypto-coin.svg" alt="Moeda cripto estilizada com símbolo Bitcoin"></div>
+          <p>Uma metáfora visual para redes abertas, consenso e inovação distribuída.</p>
+        </div>
+      </section>
+
+      <section class="form-section panel" id="contato">
+        <div class="form-intro"><span class="section-kicker">06 / PRÓXIMO PASSO</span><h2>Formulário</h2><p>Escolha um curso e deixe uma mensagem para continuar sua jornada.</p><div class="mini-note">O envio é demonstrativo e acontece apenas no navegador.</div></div>
+        <form id="courseForm" class="course-form">
+          <div class="field-group"><label for="nome">Nome</label><input id="nome" name="nome" type="text" placeholder="Digite seu nome" required></div>
+          <div class="field-group"><label for="email">E-mail</label><input id="email" name="email" type="email" placeholder="Digite seu e-mail" required></div>
+          <div class="field-group"><label for="curso">Curso</label><select id="curso" name="curso" required><option value="">Selecione</option><option value="HTML">HTML</option><option value="CSS">CSS</option><option value="JavaScript">JavaScript</option></select></div>
+          <div class="field-group field-full"><label for="comentario">Comentário</label><textarea id="comentario" name="comentario" rows="4" placeholder="Conte o que você quer aprender..."></textarea></div>
+          <div class="form-actions field-full"><button class="button button-primary" type="submit">Enviar mensagem <span>↗</span></button><span id="formMessage" role="status"></span></div>
+        </form>
+      </section>
+
+      <section class="table-section panel" aria-labelledby="students-title">
+        <div class="section-heading compact"><div><span class="section-kicker">07 / COMUNIDADE</span><h2 id="students-title">Tabela de alunos</h2></div><span class="student-count">3 alunos ativos</span></div>
+        <div class="table-wrap"><table><thead><tr><th>Nome</th><th>Idade</th><th>Curso</th><th>Status</th></tr></thead><tbody><tr><td><span class="table-avatar">LT</span>Léo Tatu</td><td>28</td><td>Blockchain</td><td><span class="table-status">Ativo</span></td></tr><tr><td><span class="table-avatar">SN</span>Satoshi Nakamoto</td><td>—</td><td>Cripto</td><td><span class="table-status">Ativo</span></td></tr><tr><td><span class="table-avatar">IL</span>Iano Lopes</td><td>32</td><td>Web3</td><td><span class="table-status">Ativo</span></td></tr></tbody></table></div>
+      </section>
+
+      <footer class="footer"><span>Curso de Frontend — Manipulação do DOM</span><span>Construído com HTML, CSS e JavaScript <span class="footer-mark">◈</span></span></footer>
+    </main>
+  </div>
+</body>
+</html>
